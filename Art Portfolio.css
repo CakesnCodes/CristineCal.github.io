@@ -1,0 +1,390 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway);
+@import url(https://fonts.googleapis.com/css?family=Lustria);
+
+/*Pocket Palette:
+Mocha brown: #cc7560
+Baker-miller pink: #ff91ae
+Calico Orange: #ffac6b
+Warm milk: #ffe6e5
+Charcoal black: #30221b
+*/
+
+.banner{
+  width: 100%;
+  padding: 5px;
+  margin: 0px;
+  border-style: solid;
+  border-color: #ffe6e5;
+  border-radius: 10px;
+  justify-content: center;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background-color: #ffe6e5;
+}
+
+h1, h2, h3{
+  font-family:'Lustria', serif;
+  color: #30221b;
+}
+
+p, a, li{
+  font-family:'Raleway', sans-serif; font-size: 22px;
+  color: #30221b;
+}
+
+a:hover {
+  color: #ffac6b;
+}
+
+hr{
+  border-top: 3px dashed #cc7560;
+}
+
+.logo{
+  max-height: 55px;
+  display:flex;
+  justify-content: right;
+  align-items: right;
+}
+
+.name{
+  width: 215%;
+  color: #ffe6e5;
+}
+
+nav{
+  font-family:'Lustria',serif;
+  color: #ffe6e5;
+  width: 100%;
+  display: flex;
+  position: sticky;
+  top:0;
+  gap: 16px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  margin: 0px;
+  height: 55px;
+  background-color: #cc7560;
+
+}
+
+nav ul{
+  font-family: 'Raleway', sans-serif;
+  width: 210%;
+  list-style-type: none;
+  overflow: hidden;
+  justify-content: right;
+  font-size: 20px;
+  padding: 0px;
+  text-decoration: none;
+}
+
+nav li {
+  float: left;
+}
+
+nav li a{
+  display: block;
+  text-align: center;
+  color: #ffe6e5;
+  padding: 16px;
+  text-decoration: none;
+}
+
+nav li a:hover{
+  color: #ffac6b;
+}
+
+.title{
+  padding: 20px;
+  text-align: center;
+  color: #ffe6e5;
+  -webkit-text-stroke-width: 3px;
+  -webkit-text-stroke-color: #ff91ae;
+  text-shadow: 3px 3px 3px #30221b;
+}
+
+content{
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  display: flex;
+  padding: 50px
+}
+
+#portrait{
+  float: right;
+  border-style: dashed;
+  border-width: 7px;
+  border-radius: 50%;
+  border-color: #ff91ae;
+  margin-left: 20px;
+  margin-top: 30px;
+}
+
+#tools{
+  text-align: center;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  line-height: 50px;
+}
+
+/*Iframes*/
+
+#impstuff{  
+  padding: 5px 30px;
+  border: none;
+  height: 1135px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.layout {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  gap: 16px;
+}
+
+.marginLeft { margin-left: auto; }
+
+#portfolio{
+  width: 100%;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  justify-content: center;
+  padding: 20px 0px 60px 0px;
+}
+
+/*Gallery*/
+
+.gallery {
+  margin: 0px;
+  display: grid;
+  width: 90%;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+}
+
+.spotlight{
+  justify-content: center;
+  margin: 0px;
+  padding: 15px;
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+}
+
+.gallery__item {
+  border-style: dashed;
+  border-width: 7px;
+  border-radius: 50px;
+  border-color: #ff91ae;
+  cursor: pointer;
+  overflow: hidden;
+  border-radius: 4px;
+}
+
+.gallery__item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.3s ease-in-out;
+}
+
+.gallery__item img:hover {
+  transform: scale(1.1);
+}
+
+@media (max-width: 950px) {
+  .gallery {
+      grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 550px) {
+  .gallery {
+      grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.desc {
+  padding: 15px;
+  text-align: center;
+}
+
+footer{
+  text-align: center;
+  background-color: #ff91ae;
+  padding: 5px;
+  margin: 0px;
+}
+
+#copyright{
+  font-size: 15px;
+}
+
+/*form*/
+#form { max-width:420px; margin:50px auto; position: relative; top: 0; left: 0;}
+
+.feedback-input {
+  color: #30221b;
+  font-family: 'Raleway', sans-serif;
+  font-weight:500;
+  font-size: 18px;
+  border-radius: 5px;
+  line-height: 22px;
+  background-color: transparent;
+  border:2px solid #ff91ae;
+  transition: all 0.3s;
+  padding: 13px;
+  margin-bottom: 15px;
+  width:100%;
+  box-sizing: border-box;
+  outline:0;
+}
+
+.feedback-input:focus { border:2px solid #ffac6b; }
+
+textarea {
+  height: 150px;
+  line-height: 150%;
+  resize:vertical;
+}
+
+[type="submit"] {
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  width: 100%;
+  background:#ffac6b;
+  border-radius:5px;
+  border:0;
+  cursor:pointer;
+  color: #ffe6e5;
+  font-size:24px;
+  padding-top:10px;
+  padding-bottom:10px;
+  transition: all 0.3s;
+  margin-top:-4px;
+  font-weight:700;
+}
+[type="submit"]:hover { background:#cc7560; color:#ffe6e5 }
+
+#contact {
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+#Sorry {
+  position: absolute;
+  align-element: center;
+  top: 0px;
+  left: 300px;
+  padding: 50px;
+}
+
+#Sorry img{
+  height: 500px;
+}
+
+/*Animation (YEAAAAAHH)*/
+
+.animate{
+  animation: apologies 0.7s;
+}
+
+@keyframes apologies {
+  0% { opacity: 0; top: 50px;}
+  100% { opacity: 1; top: 0px;}
+}
+
+
+/*Modal*/
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.8); /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.modal-content {
+  border-style: solid;
+  border-color: #ffe6e5;
+  margin: auto;
+  display: block;
+  height: 65%;
+  opacity: 1 !important;
+  max-width: 1200px;
+}
+
+/* Caption of Modal Image */
+.modal-caption {
+  font-family:'Raleway', sans-serif; font-size: 22px;
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 1200px;
+  text-align: center;
+  color: white;
+  font-weight: 700;
+  font-size: 1em;
+  margin-top: 32px;
+}
+
+/* Add Animation */
+.modal-content, .modal-caption {  
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+  from {-webkit-atransform:scale(0)} 
+  to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+  from {transform:scale(0)} 
+  to {transform:scale(1)}
+}
+
+/* The Close Button */
+.modal-close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.modal-close:hover,
+.modal-close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
