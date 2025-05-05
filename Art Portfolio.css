@@ -82,7 +82,7 @@ nav{
 
 nav ul{
   font-family: 'Raleway', sans-serif;
-  width: 125%;
+  width: 120%;
   list-style-type: none;
   justify-content: right;
   font-size: 20px;
@@ -117,55 +117,6 @@ nav li a:hover{
   -webkit-text-stroke-color: #ff91ae;
   text-shadow: 3px 3px 3px #30221b;
 }
-
-/*RESPONSIVENESS*/
-
-@media screen and (max-width: 992px){
-  h1, h2, h3{
-   font-size: 25px;
-  }
-
-  p, a, li{
-   font-size: 25px;
-  }
-  nav ul{
-    width: 150%;
-  }
-  nav li a{
-    font-size: 17px;
-    padding: 7px;
-  }
-  .name{
-    font-size: 17px;
-    padding-right: 20px;
-  }
-}
-
-@media screen and (max-width: 600px){
-  h1, h2, h3{
-   font-size: 25px;
-  }
-
-  p, a, li{
-   font-size: 20px;
-   text-align: center;
-  }
-
-  nav ll{
-    width: 100%;
-  }
-  
-  nav li a{
-    padding:5px;
-    font-size: 15px;
-  }
-
-  .name{
-    width: 10%;
-    padding-right: 100px;
-  }
-}
-
 
 content{
   width: 100%;
@@ -212,26 +163,6 @@ content{
 }
 
 .marginLeft { margin-left: auto; }
-
-@media screen and (max-width: 992px){
-    #portrait{
-      width: 50%;
-    }
-    #impstuff{
-    height: 2100px;
-    padding: 5px 20px;
-  }
-}
-
-@media screen and (max-width: 600px){
-    #portrait{
-      width: 100%;
-    }
-    #impstuff{
-    height: 3000px;
-    padding: 5px 10px;
-  }
-}
 
 /*Gallery*/
 
@@ -280,21 +211,6 @@ content{
 
 .gallery__item img:hover {
   transform: scale(1.1);
-}
-
-@media (max-width: 950px) {
-  .gallery{
-      grid-template-columns: repeat(2, 1fr);
-  }
-  .spotlight{
-      grid-template-columns: repeat(1, 1fr);
-    }
-}
-
-@media (max-width: 550px) {
-  .gallery .spotlight{
-      grid-template-columns: repeat(1, 1fr);
-  }
 }
 
 .desc {
@@ -409,8 +325,8 @@ textarea {
   width: 100%; /* Full width */
   height: 100%; /* Full height */
   overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.8); /* Black w/ opacity */
+  background-color: rgb(48,34,27); /* Fallback color */
+  background-color: rgba(48,34,27,0.8); /* Black w/ opacity */
 }
 
 /* Modal Content (image) */
@@ -461,7 +377,7 @@ textarea {
   position: absolute;
   top: 15px;
   right: 35px;
-  color: #f1f1f1;
+  color: #ffe6e5;
   font-size: 40px;
   font-weight: bold;
   transition: 0.3s;
@@ -469,7 +385,87 @@ textarea {
 
 .modal-close:hover,
 .modal-close:focus {
-  color: #bbb;
+  color: #ffac6b;
   text-decoration: none;
   cursor: pointer;
+}
+
+/*RESPONSIVENESS*/
+
+@media screen and (max-width: 950px){
+  h1, h2, h3{
+   font-size: 25px;
+  }
+
+  p, a, li{
+   font-size: 25px;
+  }
+  nav ul{
+    width: 150%;
+  }
+  nav li a{
+    font-size: 17px;
+    padding: 7px;
+  }
+  .name{
+    font-size: 17px;
+    padding-right: 20px;
+  }
+  #portrait{
+      width: 50%;
+    }
+  #impstuff{
+    height: 2100px;
+    padding: 5px 20px;
+  }
+  .modal-content{
+    height: 40%;
+    max-width: 700px;
+
+  .gallery{
+      grid-template-columns: repeat(2, 1fr);
+  }
+  .spotlight{
+      grid-template-columns: repeat(1, 1fr);
+    }    
+  }
+}
+
+@media screen and (max-width: 600px){
+  h1, h2, h3{
+   font-size: 25px;
+  }
+
+  p, a, li{
+   font-size: 20px;
+   text-align: center;
+  }
+
+  nav ll{
+    width: 100%;
+  }
+  
+  nav li a{
+    padding:5px;
+    font-size: 15px;
+  }
+
+  .name{
+    width: 10%;
+    padding-right: 100px;
+  }
+  #portrait{
+    width: 100%;
+  }
+  #impstuff{
+    height: 3000px;
+    padding: 5px 10px;
+  }
+  .modal-content{
+    height: 10%;
+    max-width: 500px;
+  }
+  .gallery .spotlight{
+      grid-template-columns: repeat(1, 1fr);
+  }
 }
