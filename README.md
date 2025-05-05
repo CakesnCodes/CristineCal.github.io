@@ -1,7 +1,5 @@
 #TreesCal.github.io
 
-https://cakesncodes.github.io/TreesCal.github.io/
-
 Website name pending...
 
 This website is created for my Assessment 2 of web development classes.
