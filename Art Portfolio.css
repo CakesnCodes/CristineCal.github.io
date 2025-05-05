@@ -55,9 +55,13 @@ hr{
 }
 
 .name{
-  width: 215%;
+  float: left;
+  width: 100%;
+  padding-right: 200px;
   color: #ffe6e5;
 }
+
+/*Navigation bar*/
 
 nav{
   font-family:'Lustria',serif;
@@ -78,16 +82,18 @@ nav{
 
 nav ul{
   font-family: 'Raleway', sans-serif;
-  width: 210%;
+  width: 120%;
   list-style-type: none;
-  overflow: hidden;
   justify-content: right;
   font-size: 20px;
+  line-height: 5px;
   padding: 0px;
   text-decoration: none;
+  position: relative;
+  right: 0;
 }
 
-nav li {
+nav li{
   float: left;
 }
 
@@ -112,6 +118,55 @@ nav li a:hover{
   text-shadow: 3px 3px 3px #30221b;
 }
 
+/*RESPONSIVENESS*/
+
+@media screen and (max-width: 992px){
+  h1, h2, h3{
+   font-size: 25px;
+  }
+
+  p, a, li{
+   font-size: 25px;
+  }
+  nav ul{
+    width: 150%;
+  }
+  nav li a{
+    font-size: 17px;
+    padding: 7px;
+  }
+  .name{
+    font-size: 17px;
+    padding-right: 20px;
+  }
+}
+
+@media screen and (max-width: 600px){
+  h1, h2, h3{
+   font-size: 25px;
+  }
+
+  p, a, li{
+   font-size: 20px;
+   text-align: center;
+  }
+
+  nav ll{
+    width: 100%;
+  }
+  
+  nav li a{
+    padding:5px;
+    font-size: 15px;
+  }
+
+  .name{
+    width: 10%;
+    padding-right: 100px;
+  }
+}
+
+
 content{
   width: 100%;
   height: 100%;
@@ -128,6 +183,7 @@ content{
   border-color: #ff91ae;
   margin-left: 20px;
   margin-top: 30px;
+  margin-bottom: 30px;
 }
 
 #tools{
@@ -136,6 +192,13 @@ content{
   margin: 0;
   padding: 0;
   line-height: 50px;
+}
+
+.layout {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  gap: 16px;
 }
 
 /*Iframes*/
@@ -148,14 +211,29 @@ content{
   overflow: hidden;
 }
 
-.layout {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  gap: 16px;
+.marginLeft { margin-left: auto; }
+
+@media screen and (max-width: 992px){
+    #portrait{
+      width: 50%;
+    }
+    #impstuff{
+    height: 2100px;
+    padding: 5px 20px;
+  }
 }
 
-.marginLeft { margin-left: auto; }
+@media screen and (max-width: 600px){
+    #portrait{
+      width: 100%;
+    }
+    #impstuff{
+    height: 3000px;
+    padding: 5px 10px;
+  }
+}
+
+/*Gallery*/
 
 #portfolio{
   width: 100%;
@@ -167,8 +245,6 @@ content{
   padding: 20px 0px 60px 0px;
 }
 
-/*Gallery*/
-
 .gallery {
   margin: 0px;
   display: grid;
@@ -178,9 +254,7 @@ content{
 }
 
 .spotlight{
-  justify-content: center;
   margin: 0px;
-  padding: 15px;
   display: grid;
   width: 100%;
   grid-template-columns: repeat(3, 1fr);
@@ -209,13 +283,16 @@ content{
 }
 
 @media (max-width: 950px) {
-  .gallery {
+  .gallery{
       grid-template-columns: repeat(2, 1fr);
   }
+  .spotlight{
+      grid-template-columns: repeat(1, 1fr);
+    }
 }
 
 @media (max-width: 550px) {
-  .gallery {
+  .gallery .spotlight{
       grid-template-columns: repeat(1, 1fr);
   }
 }
@@ -223,6 +300,14 @@ content{
 .desc {
   padding: 15px;
   text-align: center;
+}
+
+#pengi{
+  padding: 15px;
+  width: 50%;
+  position: relative;
+  bottom:0;
+  left: 27%;
 }
 
 footer{
