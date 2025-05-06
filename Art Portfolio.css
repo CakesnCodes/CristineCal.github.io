@@ -354,6 +354,21 @@ textarea {
   margin-top: 32px;
 }
 
+@media (max-width: 950px) {
+  .gallery{
+      grid-template-columns: repeat(2, 1fr);
+  }
+  .spotlight{
+      grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media (max-width: 550px) {
+  .gallery .spotlight{
+      grid-template-columns: repeat(1, 1fr);
+  }
+}
+
 /* Add Animation */
 .modal-content, .modal-caption {  
   -webkit-animation-name: zoom;
@@ -420,14 +435,7 @@ textarea {
   }
   .modal-content{
     height: 40%;
-    max-width: 700px;
-
-  .gallery{
-      grid-template-columns: repeat(2, 1fr);
-  }
-  .spotlight{
-      grid-template-columns: repeat(1, 1fr);
-    }    
+    max-width: 700px; 
   }
 }
 
@@ -464,8 +472,5 @@ textarea {
   .modal-content{
     height: 10%;
     max-width: 500px;
-  }
-  .gallery .spotlight{
-      grid-template-columns: repeat(1, 1fr);
   }
 }
