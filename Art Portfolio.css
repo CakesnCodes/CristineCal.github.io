@@ -437,6 +437,14 @@ textarea {
     height: 40%;
     max-width: 700px;
   }
+
+  #Sorry img{
+    height: 250px;
+  }
+  #pengi{
+    width:50%;
+    left: 27%;
+  }
 }
 
 @media screen and (max-width: 600px){
@@ -472,5 +480,12 @@ textarea {
   .modal-content{
     height: 10%;
     max-width: 500px;
+  }
+  #Sorry img{
+    height: 250px;
+  }
+  #pengi{
+    width: 70%;
+    left: 27%;
   }
 }
