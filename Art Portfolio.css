@@ -82,7 +82,7 @@ nav{
 
 nav ul{
   font-family: 'Raleway', sans-serif;
-  width: 120%;
+  width: 150%;
   list-style-type: none;
   justify-content: right;
   font-size: 20px;
@@ -235,7 +235,7 @@ content{
 
 #pengi{
   padding: 15px;
-  width: 50%;
+  width: 70%;
   position: relative;
   bottom:0;
   left: 27%;
